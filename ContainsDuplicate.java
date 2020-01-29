@@ -17,4 +17,15 @@ public class ContainsDuplicate {
         }
         return false;
     }
+
+//    public boolean containsDuplicate(int[] nums) {
+//        Set<Integer> res = new HashSet<>();
+//        for(int i : nums){
+//            res.add(i);
+//        }
+//        if(res.size() < nums.length){
+//            return true;
+//        }
+//        return false;
+//    }
 }
