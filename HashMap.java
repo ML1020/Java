@@ -42,11 +42,12 @@ public class HashMap<K, V> implements Map<K, V> {
         hash = (hash >>> 16) ^ hash;
         int index = hash & (table.length  - 1);
         // index => 链表（取到的是头结点）
-        //index为下标，head为此下标的头结点
+        //index为数组的下标，head为此下标的下面链表头结点
         Entry<K, V> head = table[index];
         // 在链表中查找
         Entry<K, V> node = head;
         while (node != null) {
+            //如果key在链表中已存在，则替换为新value
             if (key.equals(node.key)) { // 这里调用了 key 的 equals()
                 V oldValue = node.value;
                 node.value = value;
